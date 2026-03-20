@@ -156,11 +156,13 @@ function renderNews(data) {
 // ===== Render: Students =====
 function renderStudents(data) {
   var currentEl = document.getElementById('current-students');
+  var incomingEl = document.getElementById('incoming-students');
   var gradEl = document.getElementById('graduated-students');
   if (!currentEl || !gradEl) return;
 
-  var current = data.filter(function(s) { return s.status === 'current'; });
-  var graduated = data.filter(function(s) { return s.status === 'graduated'; });
+  var current = data.filter(function(s) { return s.status.toLowerCase() === 'current'; });
+  var incoming = data.filter(function(s) { return s.status.toLowerCase() === 'incoming'; });
+  var graduated = data.filter(function(s) { return s.status.toLowerCase() === 'graduated'; });
 
   var placeholder = '<div class="student-avatar">' +
     '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
@@ -186,6 +188,7 @@ function renderStudents(data) {
   }
 
   currentEl.innerHTML = current.map(cardHTML).join('\n');
+  if (incomingEl) incomingEl.innerHTML = incoming.map(cardHTML).join('\n');
   gradEl.innerHTML = graduated.map(cardHTML).join('\n');
 
   observeAnimations();
@@ -257,6 +260,19 @@ if (document.querySelector('.year-tab')) {
   initPubTabs();
 }
 
+function renderChipGallery(data) {
+  var container = document.getElementById('chip-gallery');
+  if (!container) return;
+  container.innerHTML = data.map(function(chip) {
+    var img = escapeHTML(chip.image.trim());
+    var label = escapeHTML(chip.label.trim());
+    return '<div class="chip-item">' +
+      '<img src="assets/images/chip_gallery/' + img + '" alt="' + label + '">' +
+      '<p>' + label + '</p></div>';
+  }).join('');
+  observeAnimations();
+}
+
 // ===== Data Loading =====
 document.addEventListener('DOMContentLoaded', function() {
   // Set email display text
@@ -302,6 +318,16 @@ document.addEventListener('DOMContentLoaded', function() {
       .catch(function() {
         document.getElementById('fall-courses').innerHTML =
           '<p style="color:#a0aec0;">Unable to load courses.</p>';
+      });
+  }
+
+  if (document.getElementById('chip-gallery')) {
+    fetch('data/chips.csv')
+      .then(function(r) { return r.text(); })
+      .then(function(text) { renderChipGallery(parseCSV(text)); })
+      .catch(function() {
+        document.getElementById('chip-gallery').innerHTML =
+          '<p style="color:#a0aec0;">Unable to load chip gallery.</p>';
       });
   }
 

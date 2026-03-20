@@ -3,3 +3,4 @@ Jia_file/
 *.py
 __pycache__/
 标志*.png
+.claude/
