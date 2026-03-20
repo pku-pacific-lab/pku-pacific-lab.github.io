@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PACIFIC Lab - School of Integrated Circuits, Peking University</title>
+  <meta name="description" content="PACIFIC Lab (PKU Architecture & Circuit Innovations For Intelligent Chips) at School of Integrated Circuits, Peking University. Research on efficient AI hardware, compute-in-memory, and agile chip design.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/logo-180.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt="PACIFIC" class="nav-logo"><img src="assets/images/pku_logo.png" alt="PKU">PACIFIC Lab</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+      </div>
+      <button class="hamburger" onclick="toggleMobileMenu()">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Home</a>
+    <a href="news.html" class="nav-link" onclick="closeMobileMenu()">News</a>
+    <a href="research.html" class="nav-link" onclick="closeMobileMenu()">Research</a>
+    <a href="publications.html" class="nav-link" onclick="closeMobileMenu()">Publications</a>
+    <a href="team.html" class="nav-link" onclick="closeMobileMenu()">Team</a>
+    <a href="teaching.html" class="nav-link" onclick="closeMobileMenu()">Teaching</a>
+  </div>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container" style="position:relative;z-index:1;">
+      <div class="hero-grid">
+        <div class="fade-left">
+          <img src="assets/images/profile.jpg" alt="Prof. Tianyu Jia" class="profile-img" style="width:220px;height:280px;border-radius:16px;">
+        </div>
+        <div class="fade-right" style="transition-delay:0.1s;">
+          <p style="font-size:0.72rem;font-weight:600;color:var(--text-muted);letter-spacing:0.08em;margin-bottom:0.6rem;">
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">P</span>KU
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">A</span>rchitecture &amp;
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">C</span>ircuit
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">I</span>nnovations
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">F</span>or
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">I</span>ntelligent
+            <span style="color:var(--accent);font-weight:800;letter-spacing:0.12em;">C</span>hips
+          </p>
+          <h1 style="font-size:2.8rem;font-weight:800;color:var(--primary);line-height:1.15;margin-bottom:0.25rem;">
+            Tianyu Jia <span style="font-size:2rem;font-weight:300;color:var(--text-muted);margin-left:0.3rem;">贾天宇</span>
+          </h1>
+          <p style="font-size:1.05rem;color:var(--text-secondary);margin-bottom:1.25rem;">Assistant Professor · School of Integrated Circuits, Peking University</p>
+          <p style="color:var(--text-secondary);line-height:1.7;max-width:520px;margin-bottom:1.25rem;font-size:0.95rem;">
+            My research focuses on exploring <strong>efficient AI hardware</strong> including domain-specific accelerators, compute-in-memory architectures, LLM-assisted agile chip design, and efficient power/thermal management.
+          </p>
+          <div style="display:flex;flex-wrap:wrap;gap:0.6rem;">
+            <a href="https://scholar.google.com/citations?user=x5IMx08AAAAJ&hl=en" target="_blank" class="btn btn-outline">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg>
+              Google Scholar
+            </a>
+            <span class="btn btn-primary email-protected" onclick="revealEmail(this)" title="Click to send email">
+              <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              <span class="email-text"></span>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <div class="fade-up" style="margin-top:2.5rem;transition-delay:0.2s;">
+        <div class="card" style="max-width:860px;">
+          <p style="color:var(--text-secondary);line-height:1.7;font-size:0.9rem;">
+            Prior to joining Peking University, I was an Assistant Research Professor at the Department of ECE, <strong>Carnegie Mellon University</strong>. I was a Postdoctoral Fellow in the Harvard Architecture, Circuits, and Compilers group at <strong>Harvard University</strong> (2020-2021). I obtained the Ph.D. degree in Computer Engineering (<strong>Best Thesis Award</strong>) from <strong>Northwestern University</strong> in 2019. My research has been published at top-tier venues including ISSCC, JSSC, VLSI, MICRO, DAC, ISCA, ASPLOS, etc.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Navigation Cards -->
+  <section class="section">
+    <div class="container">
+      <div class="fade-up">
+        <p class="section-label">Explore</p>
+        <h2 class="section-title">Our Lab</h2>
+      </div>
+      <div class="nav-cards fade-up" style="transition-delay:0.1s;">
+        <a href="news.html" class="nav-card">
+          <div class="nav-card-icon" style="background:#ecfeff;color:#0891b2;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+          </div>
+          <div>
+            <h3>News</h3>
+            <p>Latest updates, paper acceptances, and awards</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a href="research.html" class="nav-card">
+          <div class="nav-card-icon" style="background:#e0f2fe;color:#0369a1;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+          </div>
+          <div>
+            <h3>Research</h3>
+            <p>Efficient AI accelerators and low-power circuit design</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a href="publications.html" class="nav-card">
+          <div class="nav-card-icon" style="background:#f0f9ff;color:#0c4a6e;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
+          </div>
+          <div>
+            <h3>Publications</h3>
+            <p>ISSCC, JSSC, VLSI, MICRO, DAC, ISCA, and more</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a href="team.html" class="nav-card">
+          <div class="nav-card-icon" style="background:#d1fae5;color:#065f46;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+          </div>
+          <div>
+            <h3>Team</h3>
+            <p>Current and graduated students</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+        <a href="teaching.html" class="nav-card">
+          <div class="nav-card-icon" style="background:#fef3c7;color:#92400e;">
+            <svg width="22" height="22" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 7l-9-5 9-5 9 5-9 5z"/></svg>
+          </div>
+          <div>
+            <h3>Teaching</h3>
+            <p>Graduate and undergraduate courses</p>
+          </div>
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hiring Banner -->
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="hiring-banner fade-up">
+        <div style="position:relative;z-index:1;">
+          <p style="font-size:0.7rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;opacity:0.7;margin-bottom:0.4rem;">Join Us</p>
+          <h2 style="font-size:1.6rem;font-weight:800;margin-bottom:0.75rem;">We Are Recruiting!</h2>
+          <p style="max-width:640px;line-height:1.7;opacity:0.9;font-size:0.9rem;margin-bottom:1.25rem;">
+            Looking for self-motivated <strong>PostDoc researchers</strong> and <strong>PhD students</strong> working on AI accelerators and SoC chips. Undergraduates at PKU are also welcome. Background in VLSI, Computer Architecture, or AI algorithms preferred.
+          </p>
+          <span class="btn btn-white email-protected" onclick="revealEmail(this)">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            <span class="email-text"></span>
+          </span>
+        </div>
+      </div>
+
+      <!-- Contact cards -->
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin-top:2rem;" class="contact-grid fade-up">
+        <div class="card" style="text-align:center;">
+          <div style="width:44px;height:44px;margin:0 auto 0.75rem;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#e0f2fe;">
+            <svg width="20" height="20" style="color:#0369a1;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <p style="font-size:0.8rem;color:var(--text-muted);">Email</p>
+          <p class="email-protected" onclick="revealEmail(this)" style="font-weight:600;margin-top:0.2rem;font-size:0.9rem;">
+            <span class="email-text"></span>
+          </p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="width:44px;height:44px;margin:0 auto 0.75rem;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#ecfeff;">
+            <svg width="20" height="20" style="color:#0891b2;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <p style="font-size:0.8rem;color:var(--text-muted);">Address</p>
+          <p style="font-weight:600;margin-top:0.2rem;font-size:0.9rem;">Micro/Nano Electronics Building</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);">5 Yiheyuan Rd, Haidian, Beijing 100871</p>
+        </div>
+        <div class="card" style="text-align:center;">
+          <div style="width:44px;height:44px;margin:0 auto 0.75rem;border-radius:12px;display:flex;align-items:center;justify-content:center;background:#d1fae5;">
+            <svg width="20" height="20" style="color:#065f46;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+          </div>
+          <p style="font-size:0.8rem;color:var(--text-muted);">Affiliation</p>
+          <p style="font-weight:600;margin-top:0.2rem;font-size:0.9rem;">School of Integrated Circuits</p>
+          <p style="font-size:0.8rem;color:var(--text-muted);">Peking University</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACIFIC Slogan -->
+  <section class="slogan-section">
+    <div class="container" style="position:relative;z-index:1;">
+      <p class="slogan-brand">PACIFIC Lab</p>
+      <p class="slogan-full">
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">P</span>KU
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">A</span>rchitecture &amp;
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">C</span>ircuit
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">I</span>nnovations
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">F</span>or
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">I</span>ntelligent
+        <span style="font-weight:800;color:rgba(255,255,255,0.95);">C</span>hips
+      </p>
+      <p class="slogan-text">"Exploring the Blue Ocean of Circuit and AI Architecture."</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text"><img src="assets/images/logo.png" alt="PACIFIC" class="footer-logo"><img src="assets/images/pku_logo.png" alt="PKU">&copy; 2026 <strong>PACIFIC</strong> Lab, Peking University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=x5IMx08AAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://ic.pku.edu.cn" target="_blank">PKU IC School</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+  </button>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

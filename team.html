@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Team - PACIFIC Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/logo-180.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt="PACIFIC" class="nav-logo"><img src="assets/images/pku_logo.png" alt="PKU">PACIFIC Lab</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="research.html" class="nav-link">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="team.html" class="nav-link active">Team</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+      </div>
+      <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Home</a>
+    <a href="news.html" class="nav-link" onclick="closeMobileMenu()">News</a>
+    <a href="research.html" class="nav-link" onclick="closeMobileMenu()">Research</a>
+    <a href="publications.html" class="nav-link" onclick="closeMobileMenu()">Publications</a>
+    <a href="team.html" class="nav-link" onclick="closeMobileMenu()">Team</a>
+    <a href="teaching.html" class="nav-link" onclick="closeMobileMenu()">Teaching</a>
+  </div>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span style="margin:0 0.4rem;">/</span> Team</div>
+      <div class="fade-up">
+        <p class="section-label">Our People</p>
+        <h2 class="section-title">Team</h2>
+      </div>
+
+      <div style="margin-top:2rem;">
+        <h3 class="section-title-sm">Current PhD Students</h3>
+        <!-- Current students (dynamically populated from CSV) -->
+        <div id="current-students" class="student-grid stagger"></div>
+      </div>
+
+      <div style="margin-top:2.5rem;">
+        <h3 class="section-title-sm">Graduated PhD Students</h3>
+        <!-- Graduated students (dynamically populated from CSV) -->
+        <div id="graduated-students" class="student-grid stagger"></div>
+      </div>
+
+      <div style="margin-top:2.5rem;" class="fade-up">
+        <img src="assets/images/group_photo.jpg" alt="Group Photo - January 5, 2026" class="research-img" style="max-width:540px;display:block;margin:0 auto;">
+        <p style="text-align:center;font-size:0.82rem;color:#a0aec0;margin-top:0.75rem;">Group Photo &middot; January 5, 2026</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text"><img src="assets/images/logo.png" alt="PACIFIC" class="footer-logo"><img src="assets/images/pku_logo.png" alt="PKU">&copy; 2026 <strong>PACIFIC</strong> Lab, Peking University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=x5IMx08AAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://ic.pku.edu.cn" target="_blank">PKU IC School</a>
+      </div>
+    </div>
+  </footer>
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+  </button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

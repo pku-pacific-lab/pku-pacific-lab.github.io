@@ -1,0 +1,11 @@
+date,title,description,type,image
+Nov 2025,Two papers are accepted by ISSCC 2026,"Congratulations to Jiaqi and Wenjie. We will present two AI accelerator chips for visual content generation and multi-speaker ASR tasks.",normal,
+Nov 2025,Two papers are accepted by DATE 2026,"Congratulations to Kangbo and Hongou (senior-year undergrad). We will present our chiplet-level architecture modeling and explorations for agentic LLM and optical interconnects.",normal,
+Aug 2025,ISLPED 2025 Best Paper Award,"GenSoC is a methodology exploration to leverage multi-agent LLMs for agile SoC design leveraging open-source hardware.",award,islped_award.png
+Jul 2025,Three papers are accepted by ICCAD 2025,"Congratulations to Siyuan and Wenjie. We will present both near-memory (3D-based and LPDDR-based) and in-memory (SRAM-based) acceleration solutions with co-optimization considerations with algorithm, thermal, and testing.",normal,
+Mar 2025,One paper is accepted by VLSI 2025,"Congratulations to Yanchi. We will present a distributed power management solution with learning capability for AI processor.",normal,
+Feb 2025,Three papers are accepted by DAC 2025,"Congratulations to Kangbo, Yiyang and Wentao. Three accelerator designs for Multimodal LLM, 3D Gaussian Splatting, and LLM inference with 3D stacked memory.",normal,
+Nov 2024,One paper is accepted by DATE 2025,"Congratulations to Zhantong (senior-year undergrad). We demonstrate CIM has great efficiency benefits for the generative model inference in TPU architecture.",normal,
+Oct 2024,One paper is accepted by ISSCC 2025,"Congratulations to Yiqi. A Diffusion accelerator with efficient compute-in-memory for multi-purpose content generation will be presented.",normal,
+Jul 2024,Two papers are accepted by ICCAD 2024,"Congratulations to Yanchi. A power modeling and analysis framework for LLM chiplets and a SoC thermal optimization solution will be presented.",normal,
+May 2024,One paper is accepted by ESSERC 2024,"Congratulations to Yiqi. A NeRF-SLAM processor with unified inference/training compute-in-memory will be presented.",normal,

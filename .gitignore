@@ -1,0 +1,5 @@
+Jia_file/
+.DS_Store
+*.py
+__pycache__/
+标志*.png

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - PACIFIC Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/images/logo-180.png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand"><img src="assets/images/logo.png" alt="PACIFIC" class="nav-logo"><img src="assets/images/pku_logo.png" alt="PKU">PACIFIC Lab</a>
+      <div class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="news.html" class="nav-link">News</a>
+        <a href="research.html" class="nav-link active">Research</a>
+        <a href="publications.html" class="nav-link">Publications</a>
+        <a href="team.html" class="nav-link">Team</a>
+        <a href="teaching.html" class="nav-link">Teaching</a>
+      </div>
+      <button class="hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html" class="nav-link" onclick="closeMobileMenu()">Home</a>
+    <a href="news.html" class="nav-link" onclick="closeMobileMenu()">News</a>
+    <a href="research.html" class="nav-link" onclick="closeMobileMenu()">Research</a>
+    <a href="publications.html" class="nav-link" onclick="closeMobileMenu()">Publications</a>
+    <a href="team.html" class="nav-link" onclick="closeMobileMenu()">Team</a>
+    <a href="teaching.html" class="nav-link" onclick="closeMobileMenu()">Teaching</a>
+  </div>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span style="margin:0 0.4rem;">/</span> Research</div>
+      <div class="fade-up">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title">Research</h2>
+      </div>
+
+      <div class="fade-up" style="margin-top:1.5rem;">
+        <div class="card">
+          <p style="color:#4a5568;line-height:1.7;font-size:0.95rem;">
+            Our research is mainly to explore more <strong>efficient computing chips</strong> for AI and other emerging applications. To keep improving the efficiency, we conduct research from both architecture-level explorations (Track 1) and novel low-power digital circuit techniques (Track 2).
+          </p>
+          <img src="assets/images/research_theme.jpg" alt="Research Theme Overview" class="research-img" style="margin-top:1.5rem;display:block;max-width:600px;margin-left:auto;margin-right:auto;">
+        </div>
+      </div>
+
+      <!-- Research topics -->
+      <div style="display:flex;flex-wrap:wrap;gap:0.6rem;justify-content:center;margin:2rem 0;" class="fade-up">
+        <span class="tag" style="background:#e0f2fe;color:#0369a1;border:1px solid #7dd3fc;">Domain-Specific Accelerators</span>
+        <span class="tag" style="background:#ecfeff;color:#0891b2;border:1px solid #67e8f9;">Compute-in-Memory</span>
+        <span class="tag" style="background:#d1fae5;color:#065f46;border:1px solid #6ee7b7;">LLM-Assisted Chip Design</span>
+        <span class="tag" style="background:#f0f9ff;color:#0c4a6e;border:1px solid #bae6fd;">Power &amp; Thermal Management</span>
+      </div>
+
+      <!-- Track 1 -->
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:2rem;" class="teaching-grid">
+        <div class="card fade-left">
+          <div class="track-header">
+            <div style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.85rem;background:#0c4a6e;flex-shrink:0;">T1</div>
+            <h3 class="section-title-sm" style="margin-bottom:0;">Architectures for Efficient AI Computing</h3>
+          </div>
+          <p style="color:#4a5568;font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+            At architecture-level, we adopt domain-specific architecture (DSA) or compute-in-memory (CIM) techniques to improve computing efficiency. We design DSA accelerators for AI and 3D Gaussian Splatting. CIM has been used for multiple accelerators targeting NeRF or Diffusion. We also explore emerging architectures, e.g., 3D arch, for LLM applications.
+          </p>
+          <img src="assets/images/track1.jpg" alt="Track 1" class="research-img" style="width:100%;">
+        </div>
+        <div class="card fade-right">
+          <div class="track-header">
+            <div style="width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:0.85rem;background:#0891b2;flex-shrink:0;">T2</div>
+            <h3 class="section-title-sm" style="margin-bottom:0;">Digital Circuits for Low-Power Optimization</h3>
+          </div>
+          <p style="color:#4a5568;font-size:0.88rem;line-height:1.7;margin-bottom:1rem;">
+            At circuit-level, we believe there is still improvement potential by leveraging "architecture-circuit" co-design/optimizations. We develop power modeling and workload-driven optimization for TinyML and chiplets. We also tapeout chips with advanced power management techniques for heavy workloads such as AI.
+          </p>
+          <img src="assets/images/track2.jpg" alt="Track 2" class="research-img" style="width:100%;">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <p class="footer-text"><img src="assets/images/logo.png" alt="PACIFIC" class="footer-logo"><img src="assets/images/pku_logo.png" alt="PKU">&copy; 2026 <strong>PACIFIC</strong> Lab, Peking University</p>
+      <div class="footer-links">
+        <a href="https://scholar.google.com/citations?user=x5IMx08AAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://ic.pku.edu.cn" target="_blank">PKU IC School</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <svg width="18" height="18" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"/></svg>
+  </button>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
