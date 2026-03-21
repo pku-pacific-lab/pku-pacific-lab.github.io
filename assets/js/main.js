@@ -159,12 +159,14 @@ function renderStudents(data) {
   var masterEl = document.getElementById('master-students');
   var incomingEl = document.getElementById('incoming-students');
   var gradEl = document.getElementById('graduated-students');
+  var incomingMasterEl = document.getElementById('incoming-master-students');
   var undergradEl = document.getElementById('undergrad-students');
   if (!currentEl || !gradEl) return;
 
   var current = data.filter(function(s) { return s.status.toLowerCase() === 'current'; });
   var master = data.filter(function(s) { return s.status.toLowerCase() === 'master'; });
   var incoming = data.filter(function(s) { return s.status.toLowerCase() === 'incoming'; });
+  var incomingMaster = data.filter(function(s) { return s.status.toLowerCase() === 'incoming_master'; });
   var graduated = data.filter(function(s) { return s.status.toLowerCase() === 'graduated'; });
   var undergrad = data.filter(function(s) { return s.status.toLowerCase() === 'undergrad'; });
 
@@ -182,10 +184,13 @@ function renderStudents(data) {
       ? '<p class="student-tagline">' + escapeHTML(s.tagline) + '</p>'
       : '';
     var link = 'member.html?name=' + encodeURIComponent(s.name.trim());
+    var cnName = (s.name_cn && s.name_cn.trim())
+      ? ' <span class="student-name-cn">' + escapeHTML(s.name_cn) + '</span>'
+      : '';
     return '<a href="' + link + '" class="student-card">' +
       photo +
       '<div class="student-text">' +
-      '<p class="student-name">' + escapeHTML(s.name) + '</p>' +
+      '<p class="student-name">' + escapeHTML(s.name) + cnName + '</p>' +
       '<p class="student-info">' + escapeHTML(s.info) + '</p>' +
       tagline +
       '</div></a>';
@@ -194,6 +199,7 @@ function renderStudents(data) {
   currentEl.innerHTML = current.map(cardHTML).join('\n');
   if (masterEl) masterEl.innerHTML = master.map(cardHTML).join('\n');
   if (incomingEl) incomingEl.innerHTML = incoming.map(cardHTML).join('\n');
+  if (incomingMasterEl) incomingMasterEl.innerHTML = incomingMaster.map(cardHTML).join('\n');
   gradEl.innerHTML = graduated.map(cardHTML).join('\n');
   if (undergradEl) undergradEl.innerHTML = undergrad.map(cardHTML).join('\n');
 
@@ -388,6 +394,7 @@ function renderMember(name, students, pubs) {
     'current': 'PhD Student',
     'master': 'Master Student',
     'incoming': 'Incoming PhD Student',
+    'incoming_master': 'Incoming Master Student',
     'graduated': 'Alumni',
     'undergrad': 'Undergraduate Researcher'
   };
@@ -419,7 +426,9 @@ function renderMember(name, students, pubs) {
       '<div class="member-photo-wrap">' + photo + '</div>' +
       '<div class="member-info">' +
         '<p class="member-status">' + statusLabel + '</p>' +
-        '<h1 class="member-name">' + escapeHTML(member.name) + '</h1>' +
+        '<h1 class="member-name">' + escapeHTML(member.name) +
+          ((member.name_cn && member.name_cn.trim()) ? ' <span class="member-name-cn">' + escapeHTML(member.name_cn) + '</span>' : '') +
+        '</h1>' +
         '<p class="member-detail">' + escapeHTML(member.info) + '</p>' +
         taglineHTML +
         tagsHTML +
