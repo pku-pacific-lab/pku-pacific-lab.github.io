@@ -156,13 +156,17 @@ function renderNews(data) {
 // ===== Render: Students =====
 function renderStudents(data) {
   var currentEl = document.getElementById('current-students');
+  var masterEl = document.getElementById('master-students');
   var incomingEl = document.getElementById('incoming-students');
   var gradEl = document.getElementById('graduated-students');
+  var undergradEl = document.getElementById('undergrad-students');
   if (!currentEl || !gradEl) return;
 
   var current = data.filter(function(s) { return s.status.toLowerCase() === 'current'; });
+  var master = data.filter(function(s) { return s.status.toLowerCase() === 'master'; });
   var incoming = data.filter(function(s) { return s.status.toLowerCase() === 'incoming'; });
   var graduated = data.filter(function(s) { return s.status.toLowerCase() === 'graduated'; });
+  var undergrad = data.filter(function(s) { return s.status.toLowerCase() === 'undergrad'; });
 
   var placeholder = '<div class="student-avatar">' +
     '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
@@ -188,8 +192,10 @@ function renderStudents(data) {
   }
 
   currentEl.innerHTML = current.map(cardHTML).join('\n');
+  if (masterEl) masterEl.innerHTML = master.map(cardHTML).join('\n');
   if (incomingEl) incomingEl.innerHTML = incoming.map(cardHTML).join('\n');
   gradEl.innerHTML = graduated.map(cardHTML).join('\n');
+  if (undergradEl) undergradEl.innerHTML = undergrad.map(cardHTML).join('\n');
 
   observeAnimations();
 }
@@ -378,7 +384,14 @@ function renderMember(name, students, pubs) {
     ? '<img class="member-photo" src="assets/images/team/' + encodeURIComponent(member.photo.trim()) + '" alt="' + escapeHTML(member.name) + '">'
     : placeholder;
 
-  var statusLabel = member.status === 'graduated' ? 'Alumni' : 'PhD Student';
+  var statusMap = {
+    'current': 'PhD Student',
+    'master': 'Master Student',
+    'incoming': 'Incoming PhD Student',
+    'graduated': 'Alumni',
+    'undergrad': 'Undergraduate Researcher'
+  };
+  var statusLabel = statusMap[member.status.toLowerCase()] || member.status;
 
   // Tags
   var tagsHTML = '';

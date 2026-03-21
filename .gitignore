@@ -3,4 +3,4 @@ Jia_file/
 *.py
 __pycache__/
 标志*.png
-.claude/
+.claude/assets/images/team/original_image/
