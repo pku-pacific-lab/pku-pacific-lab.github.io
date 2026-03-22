@@ -418,7 +418,7 @@ function renderMember(name, students, pubs) {
   // Tagline
   var taglineHTML = '';
   if (member.tagline && member.tagline.trim()) {
-    taglineHTML = '<p class="member-tagline">"' + escapeHTML(member.tagline) + '"</p>';
+    taglineHTML = '<p class="member-tagline">' + escapeHTML(member.tagline) + '</p>';
   }
 
   profileEl.innerHTML =
