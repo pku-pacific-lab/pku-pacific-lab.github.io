@@ -1,4 +1,6 @@
 date,title,description,type,image
+Mar 2026,One paper is accepted by VLSI 2026,"Congratulations to Mingxuan. We will present a 22nm reasoning LLM accelerator chip with reinforcement fine-tuning features.",normal,
+Feb 2026,Two papers are accepted by DAC 2026,"Congratulations to Zhantong and Chenhao. We will present AgenticDSE: a multi-agent design space exploration framework for chiplet accelerators.",normal,
 Nov 2025,Two papers are accepted by ISSCC 2026,"Congratulations to Jiaqi and Wenjie. We will present two AI accelerator chips for visual content generation and multi-speaker ASR tasks.",normal,
 Nov 2025,Two papers are accepted by DATE 2026,"Congratulations to Kangbo and Hongou (senior-year undergrad). We will present our chiplet-level architecture modeling and explorations for agentic LLM and optical interconnects.",normal,
 Aug 2025,ISLPED 2025 Best Paper Award,"GenSoC is a methodology exploration to leverage multi-agent LLMs for agile SoC design leveraging open-source hardware.",award,islped_award.png
