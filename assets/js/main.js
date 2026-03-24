@@ -105,7 +105,7 @@ function renderPublications(data) {
   }).join('');
 
   contentEl.innerHTML = years.map(function(y) {
-    var items = groups[y].map(function(pub) {
+    var items = groups[y].map(function(pub, idx) {
       var authors = escapeHTML(pub.authors);
       authors = authors.replace(/(Tianyu Jia[*†]*)/g, '<strong>$1</strong>');
       var award = pub.award ? '<span class="award-badge">' + escapeHTML(pub.award) + '</span>' : '';
@@ -115,6 +115,7 @@ function renderPublications(data) {
         title = '<a href="' + escapeHTML(pub.link.trim()) + '" target="_blank" class="pub-link">' + title + '</a>';
       }
       return '<div class="pub-item">' +
+        '<span class="pub-number">[' + (idx + 1) + ']</span>' +
         '<span class="pub-venue ' + tierClass + '">' + escapeHTML(pub.venue) + '</span>' +
         award +
         '<span class="pub-text">' + authors + ', ' + title + ', <em>' + escapeHTML(pub.journal) + '</em>, ' + escapeHTML(pub.date) + '.</span>' +
