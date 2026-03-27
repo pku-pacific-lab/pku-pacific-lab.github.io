@@ -1,4 +1,5 @@
 year,venue,type,award,authors,title,journal,date,link
+2026,ISEDA,conference,,"Qinzhe Zhi, Peijie Ma, Heng Wu, Tianyu Jia*",DTCO Dual-Sided Standard Cells with DP-Based Optimization and Custom Library Development,International Symposium of EDA (ISEDA),May 2026,
 2026,VLSI,conference,,"Mingxuan Li†, Wenjie Ren†, Zhuolin Li, Le Ye, Tianyu Jia*","A 122.2μJ/Token Reasoning LLM Accelerator with Reinforcement Fine-Tune Featuring Two-Level KV-Cache Compression and Spike-Driven Predictive Update",IEEE Symposium on VLSI Technology & Circuits (VLSI),Jun. 2026,
 2026,DAC,conference,,"Zhantong Zhu, Zhuolin Li, Kangbo Bai, Hongou Li, Tianyu Jia*",AgenticDSE: A Multi-Agent Design Space Exploration Framework with Multi-Phase Bayesian Optimization for Chiplet Accelerators,IEEE Design Automation Conference (DAC),Jul. 2026,
 2026,DAC,conference,,"Chenhao Xue, Yukun Wang, An Guo, Yuhui Shi, Jinwei Zhou, Xiping Dong, Yihan Yin, Yuanpeng Zhang, Tianyu Jia, Wei Gao, Qiang Wu, Xin Si, Jun Yang and Guangyu Sun",AccelCIM: Systematic Dataflow Exploration for SRAM Compute-in-Memory Accelerator,IEEE Design Automation Conference (DAC),Jul. 2026,
