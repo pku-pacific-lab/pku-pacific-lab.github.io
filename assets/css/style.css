@@ -321,7 +321,7 @@ img { max-width: 100%; height: auto; }
 
 /* ===== Alumni Cards ===== */
 .alumni-list {
-  display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; max-width: 680px;
+  display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; max-width: 900px;
 }
 .alumni-card {
   display: grid; grid-template-columns: 140px 100px 1fr; align-items: center; gap: 0.5rem;
