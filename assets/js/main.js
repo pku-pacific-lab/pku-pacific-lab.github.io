@@ -159,17 +159,15 @@ function renderStudents(data) {
   var currentEl = document.getElementById('current-students');
   var masterEl = document.getElementById('master-students');
   var incomingEl = document.getElementById('incoming-students');
-  var gradEl = document.getElementById('graduated-students');
   var incomingMasterEl = document.getElementById('incoming-master-students');
-  var undergradEl = document.getElementById('undergrad-students');
-  if (!currentEl || !gradEl) return;
+  var alumniEl = document.getElementById('alumni-students');
+  if (!currentEl) return;
 
   var current = data.filter(function(s) { return s.status.toLowerCase() === 'current'; });
   var master = data.filter(function(s) { return s.status.toLowerCase() === 'master'; });
   var incoming = data.filter(function(s) { return s.status.toLowerCase() === 'incoming'; });
   var incomingMaster = data.filter(function(s) { return s.status.toLowerCase() === 'incoming_master'; });
-  var graduated = data.filter(function(s) { return s.status.toLowerCase() === 'graduated'; });
-  var undergrad = data.filter(function(s) { return s.status.toLowerCase() === 'undergrad'; });
+  var alumni = data.filter(function(s) { return s.status.toLowerCase() === 'alumni'; });
 
   var placeholder = '<div class="student-avatar">' +
     '<svg fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
@@ -197,12 +195,23 @@ function renderStudents(data) {
       '</div></a>';
   }
 
+  function alumniCardHTML(s) {
+    var link = 'member.html?name=' + encodeURIComponent(s.name.trim());
+    var cnName = (s.name_cn && s.name_cn.trim())
+      ? escapeHTML(s.name_cn)
+      : '';
+    return '<a href="' + link + '" class="alumni-card">' +
+      '<span class="alumni-name">' + escapeHTML(s.name) + '</span>' +
+      '<span class="alumni-cn">' + cnName + '</span>' +
+      '<span class="alumni-info">' + escapeHTML(s.info) + '</span>' +
+      '</a>';
+  }
+
   currentEl.innerHTML = current.map(cardHTML).join('\n');
   if (masterEl) masterEl.innerHTML = master.map(cardHTML).join('\n');
   if (incomingEl) incomingEl.innerHTML = incoming.map(cardHTML).join('\n');
   if (incomingMasterEl) incomingMasterEl.innerHTML = incomingMaster.map(cardHTML).join('\n');
-  gradEl.innerHTML = graduated.map(cardHTML).join('\n');
-  if (undergradEl) undergradEl.innerHTML = undergrad.map(cardHTML).join('\n');
+  if (alumniEl) alumniEl.innerHTML = alumni.map(alumniCardHTML).join('\n');
 
   observeAnimations();
 }
@@ -396,8 +405,7 @@ function renderMember(name, students, pubs) {
     'master': 'Master Student',
     'incoming': 'Incoming PhD Student',
     'incoming_master': 'Incoming Master Student',
-    'graduated': 'Alumni',
-    'undergrad': 'Undergraduate Researcher'
+    'alumni': 'Alumni'
   };
   var statusLabel = statusMap[member.status.toLowerCase()] || member.status;
 

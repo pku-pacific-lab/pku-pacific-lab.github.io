@@ -319,6 +319,23 @@ img { max-width: 100%; height: auto; }
 .student-info { font-size: 0.7rem; color: var(--text-muted); margin-top: 0.25rem; }
 .student-tagline { font-size: 0.68rem; color: #64748b; margin-top: 0.4rem; font-style: italic; }
 
+/* ===== Alumni Cards ===== */
+.alumni-list {
+  display: flex; flex-direction: column; gap: 0.5rem; margin-top: 1rem; max-width: 680px;
+}
+.alumni-card {
+  display: grid; grid-template-columns: 140px 100px 1fr; align-items: center; gap: 0.5rem;
+  background: white; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  padding: 0.5rem 0.9rem; text-decoration: none; transition: all 0.3s;
+}
+.alumni-card:hover {
+  border-color: var(--accent); box-shadow: 0 2px 8px rgba(12,74,110,0.06);
+  transform: translateY(-1px);
+}
+.alumni-name { font-weight: 600; font-size: 0.82rem; color: var(--text-primary); }
+.alumni-cn { font-size: 0.78rem; color: var(--text-secondary); opacity: 0.6; }
+.alumni-info { font-size: 0.65rem; color: var(--text-muted); }
+
 /* ===== Member Profile Page ===== */
 .member-header {
   display: flex; gap: 2.5rem; align-items: flex-start; margin-top: 1.5rem;
