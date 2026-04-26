@@ -3,5 +3,5 @@ Jia_file/
 *.py
 __pycache__/
 标志*.png
-.claude/assets/images/team/original_image/
+assets/images/team/original_image/
 assets/images/chip_gallery/original_image/
