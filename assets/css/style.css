@@ -336,6 +336,57 @@ img { max-width: 100%; height: auto; }
 .alumni-cn { font-size: 0.78rem; color: var(--text-secondary); opacity: 0.6; }
 .alumni-info { font-size: 0.65rem; color: var(--text-muted); }
 
+/* ===== Group Photo Carousel ===== */
+.group-photo-section { margin-top: 3rem; }
+.group-photo-carousel {
+  position: relative; max-width: 900px; margin: 0 auto;
+  padding-bottom: 2.1rem;
+}
+.group-photo-track {
+  position: relative; overflow: hidden; border-radius: 18px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+  box-shadow: 0 18px 50px rgba(12,74,110,0.14);
+}
+.group-photo-slide { display: none; margin: 0; }
+.group-photo-slide.active { display: block; }
+.group-photo-slide img {
+  width: 100%; height: auto; max-height: 640px; object-fit: contain; display: block;
+  background: #ffffff;
+}
+.group-photo-slide figcaption {
+  position: absolute; left: 1rem; bottom: 1rem;
+  padding: 0.35rem 0.75rem; border-radius: 999px;
+  background: rgba(15,23,42,0.58); color: white; backdrop-filter: blur(8px);
+  font-size: 0.72rem; letter-spacing: 0.01em;
+}
+.group-photo-nav {
+  position: absolute; top: calc(50% - 1.6rem); z-index: 2;
+  width: 2.45rem; height: 2.45rem; border: 1px solid rgba(255,255,255,0.82);
+  border-radius: 999px; background: rgba(15,23,42,0.45); color: white;
+  font-size: 1.85rem; line-height: 1; cursor: pointer; transition: all 0.2s;
+  display: flex; align-items: center; justify-content: center; backdrop-filter: blur(8px);
+}
+.group-photo-nav:hover { background: rgba(12,74,110,0.82); transform: translateY(-1px) scale(1.03); }
+.group-photo-nav.prev { left: 1rem; }
+.group-photo-nav.next { right: 1rem; }
+.group-photo-dots {
+  position: absolute; left: 0; right: 0; bottom: 0;
+  display: flex; justify-content: center; gap: 0.45rem;
+}
+.group-photo-dot {
+  width: 0.45rem; height: 0.45rem; border-radius: 999px; border: 0;
+  background: #cbd5e1; cursor: pointer; transition: all 0.2s;
+}
+.group-photo-dot.active { width: 1.35rem; background: var(--accent); }
+@media (max-width: 768px) {
+  .group-photo-carousel { padding-bottom: 2rem; }
+  .group-photo-slide img { max-height: none; }
+  .group-photo-slide figcaption { left: 0.75rem; bottom: 0.75rem; }
+  .group-photo-nav { width: 2rem; height: 2rem; font-size: 1.45rem; }
+  .group-photo-nav.prev { left: 0.65rem; }
+  .group-photo-nav.next { right: 0.65rem; }
+}
+
 /* ===== Member Profile Page ===== */
 .member-header {
   display: flex; gap: 2.5rem; align-items: flex-start; margin-top: 1.5rem;

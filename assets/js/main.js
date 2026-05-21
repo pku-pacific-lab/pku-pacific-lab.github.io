@@ -32,6 +32,36 @@ function closeMobileMenu() {
   document.getElementById('mobileMenu').classList.remove('open');
 }
 
+// ===== Group Photo Carousel =====
+function initGroupPhotoCarousel() {
+  var carousel = document.getElementById('groupPhotoCarousel');
+  if (!carousel) return;
+
+  var slides = Array.prototype.slice.call(carousel.querySelectorAll('.group-photo-slide'));
+  var dotsEl = carousel.querySelector('.group-photo-dots');
+  var prevBtn = carousel.querySelector('.group-photo-nav.prev');
+  var nextBtn = carousel.querySelector('.group-photo-nav.next');
+  var active = 0;
+
+  dotsEl.innerHTML = slides.map(function(_, idx) {
+    return '<button class="group-photo-dot" type="button" aria-label="Show group photo ' + (idx + 1) + '"></button>';
+  }).join('');
+
+  var dots = Array.prototype.slice.call(carousel.querySelectorAll('.group-photo-dot'));
+
+  function showSlide(idx) {
+    active = (idx + slides.length) % slides.length;
+    slides.forEach(function(slide, i) { slide.classList.toggle('active', i === active); });
+    dots.forEach(function(dot, i) { dot.classList.toggle('active', i === active); });
+  }
+
+  if (prevBtn) prevBtn.addEventListener('click', function() { showSlide(active - 1); });
+  if (nextBtn) nextBtn.addEventListener('click', function() { showSlide(active + 1); });
+  dots.forEach(function(dot, idx) { dot.addEventListener('click', function() { showSlide(idx); }); });
+
+  showSlide(0);
+}
+
 // ===== Email Obfuscation =====
 function revealEmail(el) {
   const u = 'tianyuj';
@@ -301,6 +331,8 @@ document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll('.email-text').forEach(function(el) {
     el.textContent = getEmailText();
   });
+
+  initGroupPhotoCarousel();
 
   // Load CSV data based on which page we're on
   if (document.getElementById('pub-content')) {

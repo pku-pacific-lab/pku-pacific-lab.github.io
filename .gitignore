@@ -5,3 +5,5 @@ __pycache__/
 标志*.png
 assets/images/team/original_image/
 assets/images/chip_gallery/original_image/
+assets/images/group_photos/original_image/
+.superpowers/
