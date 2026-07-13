@@ -1,4 +1,5 @@
 year,venue,type,award,authors,title,journal,date,link
+2026,ICCAD,conference,,"Kangbo Bai, Zhonghua Mu, Hongze Zhou, Tianyu Jia*",L2C2: Enhancing Large-scale Chiplets for Agent Long-Context LLM Inference with Sparse and Distributed Attention,IEEE/ACM International Conference on Computer-Aided Design (ICCAD),Nov. 2026,
 2026,ISLPED,conference,,"Yifan Ding, Qianxu Wang, Dunshan Yu, Tianyu Jia*",MVP: A Mobile 3D-Stacked VLM Accelerator for Efficient Video Understanding by Leveraging Dynamic Sparse Attention Patterns,IEEE International Symposium on Low Power Electronics and Design (ISLPED),Aug. 2026,
 2026,ISLPED,conference,,"Renati Tuerhong, Yiyang Sun, Mingxuan Li, Tianyu Jia*",EdgeVLA: A Heterogeneous Edge VLA Accelerator with Iteration-Aware Low-Rank Approximation for Embodied AI,IEEE International Symposium on Low Power Electronics and Design (ISLPED),Aug. 2026,
 2026,ISLPED,conference,,"Yiyang Sun, Han Liu, Renati Tuerhong, Tianyu Jia*",CFoM-GS: An Anchor Gaussian Splatting Training Accelerator with Chunk-wise Footprint Matching,IEEE International Symposium on Low Power Electronics and Design (ISLPED),Aug. 2026,
