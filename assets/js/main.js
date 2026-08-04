@@ -475,13 +475,9 @@ function renderMember(name, students, pubs) {
     '</div>' +
     bioHTML;
 
-  // Filter publications by this member's name
-  var firstName = name.split(' ')[0];
-  var lastName = name.split(' ').slice(-1)[0];
+  // Filter publications by this member's full author name
   var memberPubs = pubs.filter(function(pub) {
-    var authors = pub.authors || '';
-    // Match "FirstName LastName" or "F. LastName" patterns
-    return authors.indexOf(lastName) !== -1 && authors.indexOf(firstName) !== -1;
+    return publicationHasAuthor(pub.authors, name);
   });
 
   if (memberPubs.length > 0) {
@@ -513,6 +509,12 @@ function renderMember(name, students, pubs) {
   }
 
   observeAnimations();
+}
+
+function publicationHasAuthor(authors, name) {
+  return (authors || '').split(/\s*,\s*(?:and\s+)?|\s+and\s+/).some(function(author) {
+    return author.trim().replace(/[*†]+$/, '').trim() === name;
+  });
 }
 
 function escapeRegex(s) {
