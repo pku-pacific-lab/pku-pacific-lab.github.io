@@ -435,6 +435,8 @@ function renderMember(name, students, pubs) {
   var statusMap = {
     'current': 'PhD Student',
     'master': 'Master Student',
+    'incoming': 'Incoming PhD Student',
+    'incoming_master': 'Incoming Master Student',
     'alumni': 'Alumni'
   };
   var statusLabel = statusMap[member.status.toLowerCase()] || member.status;
