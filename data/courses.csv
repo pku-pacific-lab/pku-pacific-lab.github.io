@@ -1,5 +1,5 @@
-semester,level,name
-Fall,Graduate,Computer Architecture of Modern System-on-Chip
+semester,level,name,url
+Fall,Graduate,Computer Architecture of Modern System-on-Chip,https://modern-soc.tianyuj.com
 Fall,Undergraduate,Full-Stack Design and Practice of Advanced Chips (1)
 Fall,Undergraduate,Principle and Design of Integrated Circuit
 Spring,Undergraduate,Digital Logic Circuit

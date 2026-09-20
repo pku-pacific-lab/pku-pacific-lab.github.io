@@ -457,6 +457,18 @@ img { max-width: 100%; height: auto; }
 .course-badge.grad { background: #ccfbf1; color: #0f766e; }
 .course-badge.undergrad { background: #dbeafe; color: #1e40af; }
 .course-name { font-weight: 600; margin-top: 0.5rem; font-size: 0.85rem; }
+a.course-card { display: block; text-decoration: none; color: inherit; position: relative; }
+.course-card-link { padding-right: 2.5rem; }
+.course-site {
+  margin-top: 0.3rem; font-size: 0.72rem; color: var(--text-secondary);
+}
+.course-link-icon {
+  position: absolute; top: 1.25rem; right: 1.25rem;
+  color: var(--text-secondary); opacity: 0.45; transition: all 0.3s;
+}
+.course-card-link:hover .course-link-icon {
+  opacity: 1; color: var(--accent); transform: translate(2px, -2px);
+}
 
 /* ===== Research Images ===== */
 .research-img {
