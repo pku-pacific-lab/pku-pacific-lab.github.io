@@ -458,16 +458,29 @@ img { max-width: 100%; height: auto; }
 .course-badge.undergrad { background: #dbeafe; color: #1e40af; }
 .course-name { font-weight: 600; margin-top: 0.5rem; font-size: 0.85rem; }
 a.course-card { display: block; text-decoration: none; color: inherit; position: relative; }
-.course-card-link { padding-right: 2.5rem; }
+.course-card-link {
+  padding-right: 9.5rem;
+  border-left: 3px solid var(--accent);
+  background: linear-gradient(90deg, rgba(8,145,178,0.05), transparent 45%);
+}
 .course-site {
   margin-top: 0.3rem; font-size: 0.72rem; color: var(--text-secondary);
 }
-.course-link-icon {
-  position: absolute; top: 1.25rem; right: 1.25rem;
-  color: var(--text-secondary); opacity: 0.45; transition: all 0.3s;
+.course-cta {
+  position: absolute; top: 50%; right: 1.25rem; transform: translateY(-50%);
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.4rem 0.85rem; border-radius: 999px;
+  border: 1px solid var(--accent); color: var(--accent);
+  font-size: 0.7rem; font-weight: 600; letter-spacing: 0.02em;
+  white-space: nowrap; transition: all 0.3s;
 }
-.course-card-link:hover .course-link-icon {
-  opacity: 1; color: var(--accent); transform: translate(2px, -2px);
+.course-card-link:hover .course-cta {
+  background: var(--accent); color: white;
+  box-shadow: 0 4px 12px rgba(8,145,178,0.3);
+}
+@media (max-width: 768px) {
+  .course-card-link { padding-right: 1.25rem; padding-bottom: 3rem; }
+  .course-cta { top: auto; bottom: 0.9rem; right: 1.25rem; transform: none; }
 }
 
 /* ===== Research Images ===== */

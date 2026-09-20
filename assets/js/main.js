@@ -264,8 +264,9 @@ function renderCourses(data) {
       if (c.url) {
         var host = c.url.replace(/^https?:\/\//, '').replace(/\/.*$/, '');
         inner += '<p class="course-site">' + escapeHTML(host) + '</p>' +
-          '<svg class="course-link-icon" width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
-          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>';
+          '<span class="course-cta">Course Website' +
+          '<svg width="12" height="12" fill="none" stroke="currentColor" viewBox="0 0 24 24">' +
+          '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg></span>';
         return '<a class="course-card course-card-link" href="' + escapeHTML(c.url) + '" target="_blank" rel="noopener">' + inner + '</a>';
       }
       return '<div class="course-card">' + inner + '</div>';
