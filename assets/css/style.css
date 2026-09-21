@@ -459,12 +459,9 @@ img { max-width: 100%; height: auto; }
 .course-name { font-weight: 600; margin-top: 0.5rem; font-size: 0.85rem; }
 a.course-card { display: block; text-decoration: none; color: inherit; position: relative; }
 .course-card-link {
-  padding-right: 9.5rem;
+  padding-right: 11rem;
   border-left: 3px solid var(--accent);
   background: linear-gradient(90deg, rgba(8,145,178,0.05), transparent 45%);
-}
-.course-site {
-  margin-top: 0.3rem; font-size: 0.72rem; color: var(--text-secondary);
 }
 .course-cta {
   position: absolute; top: 50%; right: 1.25rem; transform: translateY(-50%);
