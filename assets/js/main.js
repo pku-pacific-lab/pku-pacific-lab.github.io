@@ -186,6 +186,7 @@ function renderNews(data) {
 
 // ===== Render: Students =====
 function renderStudents(data) {
+  var postdocEl = document.getElementById('postdoc-researchers');
   var currentEl = document.getElementById('current-students');
   var masterEl = document.getElementById('master-students');
   var incomingEl = document.getElementById('incoming-students');
@@ -193,6 +194,7 @@ function renderStudents(data) {
   var alumniEl = document.getElementById('alumni-students');
   if (!currentEl) return;
 
+  var postdocs = data.filter(function(s) { return s.status.toLowerCase() === 'postdoc'; });
   var current = data.filter(function(s) { return s.status.toLowerCase() === 'current'; });
   var master = data.filter(function(s) { return s.status.toLowerCase() === 'master'; });
   var incoming = data.filter(function(s) { return s.status.toLowerCase() === 'incoming'; });
@@ -237,6 +239,10 @@ function renderStudents(data) {
       '</a>';
   }
 
+  if (postdocEl) {
+    postdocEl.innerHTML = postdocs.map(cardHTML).join('\n');
+    postdocEl.parentElement.style.display = postdocs.length ? '' : 'none';
+  }
   currentEl.innerHTML = current.map(cardHTML).join('\n');
   if (masterEl) masterEl.innerHTML = master.map(cardHTML).join('\n');
   if (incomingEl) incomingEl.innerHTML = incoming.map(cardHTML).join('\n');
@@ -439,6 +445,7 @@ function renderMember(name, students, pubs) {
     : placeholder;
 
   var statusMap = {
+    'postdoc': 'Postdoctoral Researcher',
     'current': 'PhD Student',
     'master': 'Master Student',
     'alumni': 'Alumni'
