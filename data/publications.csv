@@ -1,4 +1,6 @@
 year,venue,type,award,authors,title,journal,date,link
+2027,DATE,conference,,"Siyuan He, Keyi Ji, Kangbo Bai, Mingxuan Li, Yandong He, Tianyu Jia*",FG-PIM: Accelerating Sparse Attention with Fine-Grained PIM for Long-Context LLM Inference,"Design, Automation and Test in Europe Conference (DATE)",Mar. 2027,
+2027,DATE,conference,,"Siyuan He†, Kangbo Bai†, Yifan Ding, Yandong He, Tianyu Jia*",FlashServe: Exploiting High Bandwidth Flash for Multi-LLM Serving,"Design, Automation and Test in Europe Conference (DATE)",Mar. 2027,
 2027,HPCA,conference,,"Tengyu Zhang, Tong Xie, Mingxuan Li, Yi Chen, Zishen Wan, Jianan Mu, Xiaowei Li, Tianyu Jia, Runsheng Wang, Meng Li*",HE-Guard: Efficient Fault Recovery for Reliable Homomorphic Encryption Accelerators,IEEE International Symposium on High-Performance Computer Architecture (HPCA),Mar. 2027,
 2027,ASP-DAC,conference,,"Yifan Ding, Qianxu Wang, Keyi Ji, Dunshan Yu, Tianyu Jia*",ATLAS: A Thermal-Aware 3D-Stacked Heterogeneous Architecture For LLM Multi-Turn Dialogue Serving,32nd Asia and South Pacific Design Automation Conference (ASP-DAC),Jan. 2027,
 2027,ASP-DAC,conference,,"Jiaqi Zhou, Han Liu, Qianxu Wang, Tianyu Jia*",DREAM: 3D-stacked Token-wise Caching Diffusion Accelerator with Resource-Aware Mapping,32nd Asia and South Pacific Design Automation Conference (ASP-DAC),Jan. 2027,
