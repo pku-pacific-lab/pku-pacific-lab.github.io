@@ -1,4 +1,5 @@
 year,venue,type,award,authors,title,journal,date,link
+2027,ISSCC,conference,Highlight,"Qinzhe Zhi, Qian Cheng, Keyao Jiang, Tianyu Jia*",A 3.52mJ/word 9T-TSPC-FF-based Synthesizable-CIM Accelerator with Quantization Group Reordering and Speculative Speech Generation,IEEE International Solid-State Circuits Conference (ISSCC),Feb. 2027,
 2027,DATE,conference,,"Siyuan He, Keyi Ji, Kangbo Bai, Mingxuan Li, Yandong He, Tianyu Jia*",FG-PIM: Accelerating Sparse Attention with Fine-Grained PIM for Long-Context LLM Inference,"Design, Automation and Test in Europe Conference (DATE)",Mar. 2027,
 2027,DATE,conference,,"Siyuan He†, Kangbo Bai†, Yifan Ding, Yandong He, Tianyu Jia*",FlashServe: Exploiting High Bandwidth Flash for Multi-LLM Serving,"Design, Automation and Test in Europe Conference (DATE)",Mar. 2027,
 2027,HPCA,conference,,"Tengyu Zhang, Tong Xie, Mingxuan Li, Yi Chen, Zishen Wan, Jianan Mu, Xiaowei Li, Tianyu Jia, Runsheng Wang, Meng Li*",HE-Guard: Efficient Fault Recovery for Reliable Homomorphic Encryption Accelerators,IEEE International Symposium on High-Performance Computer Architecture (HPCA),Mar. 2027,
